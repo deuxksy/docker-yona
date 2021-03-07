@@ -37,7 +37,8 @@ services:
       - 3306:3306 
     volumes: 
       - ./mysql/data:/var/lib/mysql
-      - ./mysql/etc:/etc/mysql
+      - ./mysql/etc/conf.d:/etc/mysql/conf.d
+      - ./mysql/etc/mariadb.conf.d:/etc/mysql/mariadb.conf.d
 
   adminer:
     image: adminer:4.8.0-standalone

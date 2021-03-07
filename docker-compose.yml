@@ -5,6 +5,8 @@ services:
     build: .
     image: pokev25/yona:1.14.0
     restart: always
+    depends_on:
+      - mariadb
     links:
       - mariadb
     environment:
@@ -40,6 +42,8 @@ services:
   adminer:
     image: adminer:4.8.0-standalone
     restart: always
+    depends_on:
+      - mariadb
     environment:
       TZ: Asia/Seoul
       LANG: ko_KR.UTF-8

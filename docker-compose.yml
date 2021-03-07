@@ -34,8 +34,8 @@ services:
     ports: 
       - 3306:3306 
     volumes: 
-      - ./mysql/data:/var/lib/mysql/data
-      - ./mysql/etc:/etc/mysql
+      - ./mysql/data:/var/lib/mysql
+        #- ./mysql/etc:/etc/mysql/
 
   adminer:
     image: adminer:4.8.0-standalone

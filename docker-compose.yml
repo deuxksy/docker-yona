@@ -1,14 +1,49 @@
-version: '2'
+version: '3.7'
 
 services:
   yona:
     build: .
     image: pokev25/yona:1.14.0
     restart: always
+    links:
+      - mariadb
     environment:
-      - BEFORE_SCRIPT=before.sh
-      - JAVA_OPTS=-Xmx2048m -Xms1024m
-    volumes:
-      - ./data:/yona/data
+      TZ: Asia/Seoul
+      LANG: ko_KR.UTF-8
+      BEFORE_SCRIPT: before.sh
+      JAVA_OPTS: -Xmx2048m -Xms1024m
     ports:
       - "9000:9000"
+    volumes:
+      - ./yona/conf:/yona/data/conf
+      - ./yona/logs:/yona/data/logs
+
+  mariadb:
+    image: mariadb:10.5.9
+    restart: always
+    environment:
+      TZ: Asia/Seoul
+      LANG: ko_KR.UTF-8
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: yona
+      MYSQL_USER: yona
+      MYSQL_PASSWORD: password
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    ports: 
+      - 3306:3306 
+    volumes: 
+      - ./mysql/data:/var/lib/mysql/data
+      - ./mysql/etc:/etc/mysql
+
+  adminer:
+    image: adminer:4.8.0-standalone
+    restart: always
+    environment:
+      TZ: Asia/Seoul
+      LANG: ko_KR.UTF-8
+    links:
+      - mariadb
+    ports:
+      - 8080:8080

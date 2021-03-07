@@ -1,7 +1,6 @@
 .git
 .gitignore
 data
-shell
 *.md
 *.sh
 LICENSE

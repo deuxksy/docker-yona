@@ -39,7 +39,7 @@ Attaching to docker-yona_mariadb_1, docker-yona_adminer_1, docker-yona_yona_1
 Caused by: org.mariadb.jdbc.internal.util.dao.QueryException: Could not connect to address=(host=127.0.0.1)(port=3306)(type=master) : Connection refuse
 ```
 
-위와 같은 DB 접속 오류 발생함
+위와 같은 DB 접속 오류 발생함 실행된 docker 를 종료
 
 ./yona/conf/application.conf 파일 131 라인을 보면 MariaDB 설정 부분이 있음
 
@@ -51,4 +51,4 @@ db.default.user=yona
 db.default.password=password
 ```
 
-IP, PASSWORD 를 확인 해서 변경 해주자 다른 설정이 궁금하면 [참조](https://github.com/yona-projects/yona/blob/next/docs/ko/application-conf-desc.md) 해서 변경 하자
+IP, DB, ID, PASSWORD 를 확인 해서 변경 해주자 다른 설정이 궁금하면 [참조](https://github.com/yona-projects/yona/blob/next/docs/ko/application-conf-desc.md) 해서 변경 하자

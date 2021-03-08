@@ -2,17 +2,15 @@
 
 **docker-yona**는 **git** 기반 협업 프레임워크 [Yona](http://yona.io)를 사용하기 편리하게 docker 컨테이너로 만든 컨테이너 이미지 입니다.
 
-## 이미지
-
-### adminer
+## 1.adminer
 
 DB 관리를 위해서
 
-### mariadb
+## 1.mariadb
 
 RDB
 
-### yona
+## 1.yona
 
 Windows 기반의 docker 에서 하면 아래와 같은 문제가 발생 할수 있음 처음에 clone 을 Windows 에서 하면 안됨 아나...
 
@@ -22,7 +20,7 @@ standard_init_linux.go:219: exec user process caused: no such file or directory
 
 CRLF 문제라고 하는되 어느 파일에서 발생 한건지 모르겠다 ㅠ.ㅠ;
 
-## 실행
+### 실행
 
 ```bash
 $ docker-compose up

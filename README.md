@@ -6,11 +6,11 @@
 
 DB 관리를 위해서
 
-## 1.mariadb
+## 2.mariadb
 
 RDB
 
-## 1.yona
+## 3.yona
 
 Windows 기반의 docker 에서 하면 아래와 같은 문제가 발생 할수 있음 처음에 clone 을 Windows 에서 하면 안됨 아나...
 

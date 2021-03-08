@@ -12,7 +12,7 @@ RDB
 
 ## 3.yona
 
-Windows 기반의 docker 에서 하면 아래와 같은 문제가 발생함
+Windows 기반의 docker 에서 하면 아래와 같은 문제가 발생함 Windows 에 설치된 Linux 가서 실행 하면 문제 없음
 
 ```bash
 standard_init_linux.go:219: exec user process caused: no such file or directory

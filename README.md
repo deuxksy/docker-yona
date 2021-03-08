@@ -12,13 +12,15 @@ RDB
 
 ## 3.yona
 
-Windows 기반의 docker 에서 하면 아래와 같은 문제가 발생 할수 있음 처음에 clone 을 Windows 에서 하면 안됨 아나...
+Windows 기반의 docker 에서 하면 아래와 같은 문제가 발생함
 
 ```bash
 standard_init_linux.go:219: exec user process caused: no such file or directory
 ```
 
 CRLF 문제라고 하는되 어느 파일에서 발생 한건지 모르겠다 ㅠ.ㅠ;
+
+설마 standard_init_linux.go:219 이파일이 문제가 그럴리가
 
 ### 실행
 
